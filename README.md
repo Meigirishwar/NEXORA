@@ -243,16 +243,6 @@ NEXORA includes an interactive Kanban board for visual task management and workf
 - ⚡ Real-time task updates across the workspace
 - 🔐 Workspace-based access control
 
-### 🔄 Task Workflow
-
-```text
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│   TODO       │ ──▶ │ IN PROGRESS  │ ──▶ │    REVIEW    │ ──▶ │     DONE     │
-│              │     │              │     │              │     │              │
-│ New Tasks    │     │ Active Work  │     │ Testing /    │     │ Completed    │
-│              │     │              │     │ Verification │     │ Tasks        │
-└──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
-
 ## 🐞 Issue & Bug Tracking
 
 NEXORA provides a dedicated issue tracking system for reporting, assigning, and resolving software issues.
@@ -266,34 +256,807 @@ NEXORA provides a dedicated issue tracking system for reporting, assigning, and 
 - 📊 Track issue status
 - 💬 Add comments and discussions
 - 🔄 Update issue lifecycle
-- 🔎 Search and filter issues
+- 🔍 Search and filter issues
 - 🔐 Workspace and project-level access control
 
 ### 🔄 Issue Lifecycle
 
 ```text
-┌────────────┐
-│    OPEN    │
-└─────┬──────┘
-      │
-      ▼
-┌────────────┐
-│ IN PROGRESS│
-└─────┬──────┘
-      │
-      ▼
-┌────────────┐
-│   REVIEW   │
-└─────┬──────┘
-      │
-      ▼
-┌────────────┐
-│  RESOLVED  │
-└─────┬──────┘
-      │
-      ▼
-┌────────────┐
-│   CLOSED   │
-└────────────┘
+OPEN → IN PROGRESS → REVIEW → RESOLVED → CLOSED
+```
+
+---
+
+## 💬 Real-Time Collaboration
+
+NEXORA includes real-time communication features powered by Socket.io.
+
+### ✨ Features
+
+- 💬 Real-time project chat
+- ⚡ Instant message delivery
+- 👥 Team-based conversations
+- 🟢 Online/presence indicators
+- @️⃣ User mentions
+- ✏️ Edit messages
+- 🗑️ Delete messages
+- 🔔 Real-time notifications
+- 🔄 Live updates without page refresh
+
+### 🔌 Real-Time Architecture
+
+```text
+React Client
+     │
+     │ Socket.io
+     ▼
+Node.js + Express
+     │
+     ▼
+MongoDB
+```
+
+---
+
+## 🔔 Notifications
+
+NEXORA provides centralized notifications to keep team members informed about important project activity.
+
+### ✨ Features
+
+- 🔔 Task assignment notifications
+- 🐛 Issue-related notifications
+- 💬 Collaboration notifications
+- 📢 Project updates
+- 👥 Workspace-related notifications
+- 📅 Deadline-related updates
+- ✅ Mark notifications as read
+- 🗑️ Delete notifications
+- ⚡ Real-time notification delivery
+
+---
+
+## 📅 Calendar
+
+The Calendar module provides a centralized view of important project activities and deadlines.
+
+### ✨ Features
+
+- 📅 View upcoming tasks
+- 🏁 Track project milestones
+- ⏰ Monitor deadlines
+- 🗓️ Centralized project schedule
+- 🔎 Quickly identify upcoming activities
+- 🔗 Connect project activities with their respective modules
+
+---
+
+## 🏁 Milestones
+
+Milestones allow teams to divide projects into important delivery checkpoints.
+
+### ✨ Features
+
+- 🎯 Create project milestones
+- 📝 Add milestone descriptions
+- 📅 Set target dates
+- 📊 Track milestone progress
+- 🔗 Associate milestones with projects
+- 📈 Monitor project completion
+
+---
+
+## 📊 Reports & Analytics
+
+NEXORA includes reporting and analytics capabilities for understanding project performance.
+
+### ✨ Features
+
+- 📈 Project statistics
+- 📊 Task distribution
+- 🐛 Issue statistics
+- 🏁 Milestone progress
+- 👥 Team activity
+- 📋 Activity reports
+- 📉 Project performance visualization
+- 🖨️ Print-friendly report layouts
+
+### 📌 Report Categories
+
+| Report | Purpose |
+|---|---|
+| Project Reports | Monitor overall project progress |
+| Task Reports | Analyze task distribution and status |
+| Issue Reports | Track bugs and issue resolution |
+| Activity Reports | Review team and project activity |
+| Milestone Reports | Monitor milestone completion |
+| Dashboard Analytics | Provide visual project insights |
+
+---
+
+## 🔎 Global Search
+
+NEXORA provides centralized search functionality across the platform.
+
+### ✨ Features
+
+- 🔍 Search across workspace data
+- 📁 Find projects
+- ✅ Find tasks
+- 🐛 Find issues
+- 👥 Find team members
+- 🏁 Find milestones
+- ⚡ Quickly navigate to relevant results
+
+---
+
+## 📎 File Attachments
+
+NEXORA supports file attachments for project-related collaboration.
+
+### ✨ Features
+
+- 📁 Upload project files
+- 📎 Attach files to relevant records
+- 👤 Profile photo uploads
+- 🔐 Protected file access
+- 📂 Organized file handling
+- 🛡️ File upload validation
+
+---
+
+## 👤 User Profiles
+
+Each user has a dedicated profile containing their workspace and professional information.
+
+### ✨ Features
+
+- 👤 Profile information
+- 📸 Profile photo
+- 📧 Email information
+- 🏢 Department
+- 💻 Skills
+- 🎭 Workspace roles
+- 📊 User-related project information
+
+---
+
+## ⚙️ Settings
+
+NEXORA provides centralized settings for managing user preferences and application configuration.
+
+### ✨ Features
+
+- 👤 Profile settings
+- 🔐 Account-related settings
+- 🎨 Appearance preferences
+- 🌙 Dark mode
+- 🔔 Notification preferences
+- 🏢 Workspace-related configuration
+
+---
+
+## 🌙 Dark Mode
+
+NEXORA supports a dedicated dark mode for improved usability in different lighting environments.
+
+### ✨ Features
+
+- 🌙 Dark theme
+- ☀️ Light theme
+- 🔄 Theme switching
+- 💾 Persistent theme preference
+- 🎨 Consistent UI styling across modules
+
+---
+
+## 📱 Responsive Design
+
+NEXORA is designed to work across different screen sizes.
+
+### ✨ Supported Interfaces
+
+- 💻 Desktop
+- 🖥️ Laptop
+- 📱 Mobile
+- 📟 Tablet
+
+The interface adapts layouts, navigation, dashboards, tables, Kanban boards, and other components according to the available screen size.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                         ┌───────────────────────┐
+                         │       NEXORA          │
+                         │     React + Vite      │
+                         └───────────┬───────────┘
+                                     │
+                       ┌─────────────┴─────────────┐
+                       │                           │
+                    Axios                     Socket.io
+                       │                           │
+                       ▼                           ▼
+             ┌─────────────────────────────────────────┐
+             │          Node.js + Express.js            │
+             │                                          │
+             │  REST APIs │ JWT │ RBAC │ Socket.io     │
+             │            │ Multer │ CORS              │
+             └───────────────────┬─────────────────────┘
+                                 │
+                              Mongoose
+                                 │
+                                 ▼
+                         ┌─────────────────┐
+                         │  MongoDB Atlas  │
+                         └─────────────────┘
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React.js, Vite, JavaScript, HTML5, CSS3 |
+| Routing | React Router |
+| HTTP Client | Axios |
+| State Management | Context API |
+| Real-Time | Socket.io Client |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Drag & Drop | dnd-kit |
+| Backend | Node.js, Express.js |
+| Authentication | JWT, bcryptjs |
+| Real-Time Backend | Socket.io |
+| File Uploads | Multer |
+| Database | MongoDB |
+| ODM | Mongoose |
+| Cloud Database | MongoDB Atlas |
+| Deployment | Vercel + Render |
+
+---
+
+## 🗄️ Database Structure
+
+NEXORA uses MongoDB with Mongoose for database management.
+
+### Main Collections
+
+| Collection | Purpose |
+|---|---|
+| `User` | Stores user accounts and profile information |
+| `Workspace` | Stores workspace information |
+| `WorkspaceMember` | Manages workspace membership and roles |
+| `Project` | Stores project information |
+| `ProjectMember` | Manages project members |
+| `Task` | Stores project tasks |
+| `Sprint` | Stores sprint information |
+| `Issue` | Stores bugs and issues |
+| `Comment` | Stores comments and discussions |
+| `Notification` | Stores user notifications |
+| `Activity` | Stores activity and audit records |
+| `Milestone` | Stores project milestones |
+| `Attachment` | Stores uploaded file information |
+
+---
+
+## 🔌 Core API Structure
+
+| Module | Base Endpoint |
+|---|---|
+| Authentication | `/api/auth` |
+| Projects | `/api/projects` |
+| Tasks | `/api/tasks` |
+| Sprints | `/api/sprints` |
+| Issues | `/api/issues` |
+| Comments | `/api/comments` |
+| Notifications | `/api/notifications` |
+| Activity | `/api/activity` |
+| Milestones | `/api/milestones` |
+| Reports | `/api/reports` |
+| Search | `/api/search` |
+| Users | `/api/users` |
+| Attachments | `/api/attachments` |
+
+### Authentication Endpoints
+
+```text
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+- MongoDB 6+ or MongoDB Atlas
+- Git
+- Visual Studio Code
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Meigirishwar/NEXORA.git
+cd NEXORA
+```
+
+### 2. Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+Create a `.env` file:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_jwt_secret
+CLIENT_URL=http://localhost:5173
+UPLOAD_DIR=uploads
+```
+
+Start the backend:
+
+```bash
+npm run dev
+```
+
+Backend:
+
+```text
+http://localhost:5000
+```
+
+### 3. Frontend Setup
+
+Open a new terminal:
+
+```bash
+cd client
+npm install
+```
+
+Create the frontend environment variable:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🏢 Creating a Workspace
+
+NEXORA uses a workspace-based architecture.
+
+1. Open the application.
+2. Create a new workspace.
+3. The workspace creator becomes the `ADMIN`.
+4. Add team members.
+5. Assign appropriate workspace roles.
+6. Create projects.
+7. Add project members.
+8. Start managing tasks, sprints, issues, and milestones.
+
+Users can belong to multiple workspaces and may have different roles in different workspaces.
+
+All workspace-specific data is scoped to the currently selected workspace.
+
+---
+
+## 👥 Adding Team Members
+
+Workspace administrators can add members by providing:
+
+- Name
+- Email
+- Initial password
+- Department
+- Skills
+- Workspace role
+
+Available workspace roles:
+
+```text
+ADMIN
+PROJECT_MANAGER
+DEVELOPER
+TESTER
+```
+
+---
+
+## 🔐 Environment Variables
+
+Never commit environment variables containing secrets.
+
+### Backend
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_jwt_secret
+CLIENT_URL=http://localhost:5173
+UPLOAD_DIR=uploads
+```
+
+### Frontend
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+For production deployments, replace local URLs with the deployed frontend and backend URLs.
+
+> ⚠️ Never commit `.env`, `.env.local`, MongoDB credentials, JWT secrets, SMTP passwords, API keys, or other private credentials.
+
+---
+
+## 📧 Password Recovery
+
+Password recovery can optionally be configured using Gmail SMTP.
+
+SMTP is **not required for normal authentication or workspace usage**.
+
+Example configuration:
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-gmail-app-password
+SMTP_FROM=your-email@gmail.com
+```
+
+For Gmail, use a **Google App Password** rather than your normal Gmail password.
+
+---
+
+## ☁️ Deployment
+
+NEXORA is deployed using:
+
+| Component | Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | MongoDB Atlas |
+
+### Production Architecture
+
+```text
+                    ┌──────────────────────┐
+                    │        User          │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │       Vercel         │
+                    │   React + Vite       │
+                    └──────────┬───────────┘
+                               │
+                         HTTPS / API
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │       Render         │
+                    │ Node + Express API   │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   MongoDB Atlas      │
+                    │      Database        │
+                    └──────────────────────┘
+```
+
+### Live Application
+
+**Frontend:**  
+https://nexora-peach-eight.vercel.app
+
+**Backend:**  
+https://nexora-12uy.onrender.com
+
+---
+
+## 🧪 Testing Checklist
+
+### Authentication
+
+- [ ] User registration
+- [ ] User login
+- [ ] User logout
+- [ ] Protected routes
+- [ ] Password recovery when SMTP is configured
+
+### Workspace
+
+- [ ] Create workspace
+- [ ] Workspace selector
+- [ ] Add members
+- [ ] Remove members
+- [ ] Change member roles
+- [ ] Workspace data isolation
+
+### Projects
+
+- [ ] Create project
+- [ ] Edit project
+- [ ] Archive project
+- [ ] Add project members
+
+### Tasks
+
+- [ ] Create task
+- [ ] Assign task
+- [ ] Update priority
+- [ ] Update status
+- [ ] Drag and drop Kanban tasks
+
+### Sprints
+
+- [ ] Create sprint
+- [ ] Start sprint
+- [ ] Assign tasks
+- [ ] Track sprint progress
+
+### Issues
+
+- [ ] Create issue
+- [ ] Assign issue
+- [ ] Update issue
+- [ ] Verify issue
+- [ ] Add comments
+
+### Collaboration
+
+- [ ] Real-time chat
+- [ ] User mentions
+- [ ] Edit messages
+- [ ] Delete messages
+- [ ] Presence indicators
+
+### Notifications
+
+- [ ] Receive notifications
+- [ ] Mark as read
+- [ ] Delete notifications
+
+### Reports
+
+- [ ] Dashboard statistics
+- [ ] Project reports
+- [ ] Charts and visualizations
+- [ ] Activity reports
+- [ ] Print layouts
+
+### Files
+
+- [ ] Upload attachments
+- [ ] Upload profile photo
+- [ ] Access uploaded files
+
+### UI
+
+- [ ] Responsive layout
+- [ ] Dark mode
+- [ ] Navigation
+- [ ] Error handling
+
+---
+
+## 🔒 Security Considerations
+
+NEXORA implements several security mechanisms:
+
+- 🔐 Password hashing using bcrypt
+- 🎫 JWT-based authentication
+- 🛡️ Protected API routes
+- 👥 Role-based access control
+- 🏢 Workspace-level authorization
+- 🔑 Environment-based secrets
+- 🌐 Configured CORS
+- 📁 File upload validation
+- 🔒 Server-side authorization checks
+- 🧩 Frontend/backend separation
+
+### Sensitive Information
+
+Never commit:
+
+```text
+.env
+.env.local
+MongoDB credentials
+JWT secrets
+SMTP passwords
+API keys
+Private credentials
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+NEXORA/
+│
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   ├── services/
+│   │   ├── hooks/
+│   │   └── ...
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── uploads/
+│   ├── server.js
+│   ├── package.json
+│   └── .env.example
+│
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🎓 Academic & Technical Value
+
+NEXORA demonstrates practical implementation of:
+
+- MERN stack development
+- REST API architecture
+- JWT authentication
+- Role-Based Access Control
+- Multi-workspace authorization
+- MongoDB data modeling
+- Mongoose ODM
+- Real-time communication
+- WebSocket-based updates
+- State management
+- Drag-and-drop interfaces
+- File upload handling
+- Data visualization
+- Global search
+- Project management workflows
+- Responsive SaaS UI development
+- Cloud deployment
+
+---
+
+## 💡 Why NEXORA?
+
+Modern software teams often rely on multiple disconnected tools for:
+
+- 💬 Messaging
+- ✅ Task Tracking
+- 📋 Project Management
+- 🐛 Issue Tracking
+- 📎 File Sharing
+- 👥 Team Collaboration
+- 📊 Reports
+
+NEXORA brings these workflows together into one centralized platform:
+
+**PLAN → BUILD → TRACK → COLLABORATE → ANALYZE**
+
+---
+
+## 🖼️ Screenshots
+
+### Landing Page
+
+<img width="1886" height="926" alt="NEXORA Landing Page" src="https://github.com/user-attachments/assets/ac9d237f-c9f1-4126-895e-0ff281492eec" />
+
+### Dashboard
+
+_Add screenshot here_
+
+### Project Management
+
+_Add screenshot here_
+
+### Kanban Board
+
+_Add screenshot here_
+
+### Sprint Management
+
+_Add screenshot here_
+
+### Issue Tracking
+
+_Add screenshot here_
+
+### Real-Time Chat
+
+_Add screenshot here_
+
+### Reports & Analytics
+
+_Add screenshot here_
+
+### Workspace Management
+
+_Add screenshot here_
+
+---
+
+## 🚀 Future Improvements
+
+- 📊 Advanced analytics
+- 📅 Calendar integrations
+- 📧 Email notifications
+- ☁️ Cloud object storage
+- 🔄 CI/CD pipelines
+- 🧪 Automated testing
+- 📋 Project templates
+- 🔗 Third-party integrations
+- 📤 Activity export
+- 🔍 Advanced search and filtering
+- 🎨 Workspace branding
+
+---
+
+## 👨‍💻 Author
+
+**Meigirishwar V R**
+
+B.Tech Information Technology  
+Full-Stack Developer | Software Engineering Enthusiast
+
+**GitHub:**  
+https://github.com/Meigirishwar
+
+---
+
+## 📄 License
+
+This project is developed for **academic, learning, and portfolio purposes**.
+
+---
+
+<div align="center">
+
+### ⭐ NEXORA
+
+**Plan. Build. Track. Collaborate.**
+
+*A unified workspace for modern software teams.*
+
+</div>
+
 
 A unified workspace for modern software teams.
