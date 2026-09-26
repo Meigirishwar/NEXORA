@@ -982,35 +982,43 @@ NEXORA brings these workflows together into one centralized platform:
 
 ### Dashboard
 
-_Add screenshot here_
+<img width="1861" height="926" alt="image" src="https://github.com/user-attachments/assets/07fecef4-c9dc-48da-be77-1b2f6f0886ed" />
+
 
 ### Project Management
 
-_Add screenshot here_
+<img width="1883" height="915" alt="image" src="https://github.com/user-attachments/assets/c56a01e1-d168-468f-b230-f19b753c41aa" />
+
 
 ### Kanban Board
 
-_Add screenshot here_
+<img width="1867" height="902" alt="image" src="https://github.com/user-attachments/assets/7541ea31-27b1-4291-b914-72e1630c0e14" />
+
 
 ### Sprint Management
 
-_Add screenshot here_
+<img width="1873" height="920" alt="image" src="https://github.com/user-attachments/assets/6b73c74f-2cbd-4ee7-9633-dce6c5e4b3bd" />
+
 
 ### Issue Tracking
 
-_Add screenshot here_
+<img width="1882" height="928" alt="image" src="https://github.com/user-attachments/assets/71b041df-4d33-44fb-9f09-06c6e8ad2420" />
+
 
 ### Real-Time Chat
 
-_Add screenshot here_
+<img width="1867" height="911" alt="image" src="https://github.com/user-attachments/assets/82a76104-b11a-4f50-a756-cea53a2c10f1" />
+
 
 ### Reports & Analytics
 
-_Add screenshot here_
+<img width="1876" height="911" alt="image" src="https://github.com/user-attachments/assets/b646a1b3-ce69-4215-9a89-59d5922bf74c" />
+
 
 ### Workspace Management
 
-_Add screenshot here_
+<img width="1882" height="931" alt="image" src="https://github.com/user-attachments/assets/402ff5bf-7e36-4e8e-b638-a4a153e0e0f6" />
+
 
 ---
 
