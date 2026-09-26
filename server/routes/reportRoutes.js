@@ -1,0 +1,1 @@
+import {Router} from 'express'; import {reports,dashboard} from '../controllers/crudController.js'; import {protect} from '../middleware/authMiddleware.js'; import {requireWorkspace} from '../middleware/workspaceMiddleware.js'; const r=Router(); r.use(protect,requireWorkspace); r.get('/',reports); r.get('/dashboard',dashboard); export default r;

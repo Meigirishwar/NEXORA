@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({name:{type:String,required:true},description:String,startDate:Date,dueDate:Date,status:{type:String,enum:['Upcoming','In Progress','Completed','Overdue'],default:'Upcoming'},progress:{type:Number,default:0,min:0,max:100},project:{type:mongoose.Schema.Types.ObjectId,ref:'Project',required:true}},{timestamps:true}); export default mongoose.model('Milestone',schema);

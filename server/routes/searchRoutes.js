@@ -1,0 +1,1 @@
+import {Router} from 'express'; import {search} from '../controllers/crudController.js'; import {protect} from '../middleware/authMiddleware.js'; import {requireWorkspace} from '../middleware/workspaceMiddleware.js'; const r=Router(); r.use(protect,requireWorkspace); r.get('/',search); export default r;

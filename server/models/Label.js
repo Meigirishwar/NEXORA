@@ -1,0 +1,1 @@
+import mongoose from 'mongoose'; const schema=new mongoose.Schema({name:String,color:String,project:{type:mongoose.Schema.Types.ObjectId,ref:'Project'}},{timestamps:true}); export default mongoose.model('Label',schema);

@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({author:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},project:{type:mongoose.Schema.Types.ObjectId,ref:'Project'},task:{type:mongoose.Schema.Types.ObjectId,ref:'Task'},issue:{type:mongoose.Schema.Types.ObjectId,ref:'Issue'},message:{type:String,required:true},mentions:[{type:mongoose.Schema.Types.ObjectId,ref:'User'}]},{timestamps:true}); export default mongoose.model('Comment',schema);

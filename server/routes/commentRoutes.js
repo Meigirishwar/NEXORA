@@ -1,0 +1,1 @@
+import {Router} from 'express'; import {listComments,createComment} from '../controllers/crudController.js'; import {protect} from '../middleware/authMiddleware.js'; import {requireWorkspace} from '../middleware/workspaceMiddleware.js'; const r=Router(); r.use(protect,requireWorkspace); r.get('/',listComments); r.post('/',createComment); export default r;

@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({originalName:String,filename:String,path:String,mimetype:String,size:Number,uploader:{type:mongoose.Schema.Types.ObjectId,ref:'User'},project:{type:mongoose.Schema.Types.ObjectId,ref:'Project'},task:{type:mongoose.Schema.Types.ObjectId,ref:'Task'},issue:{type:mongoose.Schema.Types.ObjectId,ref:'Issue'}},{timestamps:true}); export default mongoose.model('Attachment',schema);

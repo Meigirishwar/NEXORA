@@ -1,0 +1,17 @@
+import {Router} from 'express';
+import {protect} from '../middleware/authMiddleware.js';
+import {requireWorkspace,workspaceRoles} from '../middleware/workspaceMiddleware.js';
+import {listWorkspaces,createWorkspace,setupWorkspace,getWorkspace,updateWorkspace,deleteWorkspace,addMember,updateMember,removeMember,leaveWorkspace} from '../controllers/workspaceController.js';
+const r=Router();
+r.post('/setup',setupWorkspace);
+r.use(protect);
+r.get('/',listWorkspaces);
+r.post('/',createWorkspace);
+r.get('/:id',requireWorkspace,getWorkspace);
+r.put('/:id',requireWorkspace,workspaceRoles('ADMIN'),updateWorkspace);
+r.delete('/:id',requireWorkspace,workspaceRoles('ADMIN'),deleteWorkspace);
+r.post('/:id/members',requireWorkspace,workspaceRoles('ADMIN'),addMember);
+r.put('/:id/members/:userId',requireWorkspace,workspaceRoles('ADMIN'),updateMember);
+r.delete('/:id/members/:userId',requireWorkspace,workspaceRoles('ADMIN'),removeMember);
+r.post('/:id/leave',requireWorkspace,leaveWorkspace);
+export default r;

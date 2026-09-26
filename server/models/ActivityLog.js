@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({workspace:{type:mongoose.Schema.Types.ObjectId,ref:'Workspace',index:true},actor:{type:mongoose.Schema.Types.ObjectId,ref:'User'},project:{type:mongoose.Schema.Types.ObjectId,ref:'Project'},action:String,objectType:String,objectId:mongoose.Schema.Types.ObjectId,metadata:mongoose.Schema.Types.Mixed},{timestamps:true}); export default mongoose.model('ActivityLog',schema);

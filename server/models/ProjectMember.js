@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({project:{type:mongoose.Schema.Types.ObjectId,ref:'Project',required:true},user:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},role:{type:String,enum:['PROJECT_MANAGER','DEVELOPER','TESTER','GUEST','OTHER'],default:'DEVELOPER'}},{timestamps:true}); schema.index({project:1,user:1},{unique:true}); export default mongoose.model('ProjectMember',schema);
